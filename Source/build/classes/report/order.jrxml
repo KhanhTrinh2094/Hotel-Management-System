@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="order" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b0576868-7cf9-4241-b559-13f2db7b487a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="243"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Service" uuid="067da668-0614-4963-9f40-7b468b79efe4">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="nameSer" class="java.lang.String">
+			<fieldDescription><![CDATA[nameSer]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Food" uuid="0c253d65-96a3-4b63-beed-e45e48e4e342">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="nameFo" class="java.lang.String">
+			<fieldDescription><![CDATA[nameFo]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Drink" uuid="0992d3ed-8eb1-4b9b-a7a1-82d4693bd022">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="nameDri" class="java.lang.String">
+			<fieldDescription><![CDATA[nameDri]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="Service" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" isForPrompting="false"/>
+	<parameter name="Food" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" isForPrompting="false"/>
+	<parameter name="Drink" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="roomNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[roomNo]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="79" forecolor="#FFFFFF" backcolor="#006633" uuid="35ff25ec-158e-47f6-833b-6cbff06d68ad"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="38" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ORDER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="201" height="36" uuid="425334c8-1602-4ce1-9a27-75d0af3d8739"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ROOM NO. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="363" y="0" width="192" height="36" uuid="b106e024-1db1-4beb-8dee-19ad1f06514c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roomNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="45" forecolor="#FFFFFF" backcolor="#339900" uuid="6de75bdc-b1f2-4faa-8119-3373338794a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SERVICES]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="table" style="table" x="0" y="45" width="555" height="32" uuid="45a7a0f4-f72e-4e8b-9ace-b1b6b64a6e9e"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Service" uuid="7f91773d-b662-4739-b1fe-87a83abc1cdc">
+						<dataSourceExpression><![CDATA[$P{Service}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="554" uuid="f860df26-ff8e-4d13-96c2-e04ba7225802">
+						<jr:detailCell style="table_TD" height="29" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="554" height="28" forecolor="#009900" uuid="e7ba5a9e-9340-44ed-a7db-f1c735d43a6e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nameSer}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="125">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="44" forecolor="#FFFFFF" backcolor="#339900" uuid="fa97e427-7cdc-4388-8c39-8d895102c235"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FOODS]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="table 1" style="table 1" x="0" y="44" width="555" height="32" uuid="b671578c-e58e-43da-9c28-3a1bb80fa96a"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Food" uuid="924a18d4-6ad9-4ba6-af19-8674456bc172">
+						<dataSourceExpression><![CDATA[$P{Food}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="554" uuid="4d93506d-213b-437f-b4c1-8435e879b22a">
+						<jr:detailCell style="table 1_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="554" height="30" forecolor="#009900" uuid="55ae0a1d-2c1b-4217-b718-6ecc33634dbe"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nameFo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="125">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="40" forecolor="#FFFFFF" backcolor="#339900" uuid="850e4ef3-79ff-4c5d-8ff0-e262f068dfc8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DRINKS]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="table 2" style="table 2" x="0" y="40" width="555" height="33" uuid="93562978-b6ff-4c06-b546-96080be967ed"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Drink" uuid="17c53c23-95f7-4e78-aa43-8466dbff3f2f">
+						<dataSourceExpression><![CDATA[$P{Drink}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="554" uuid="638cc92d-b33c-49c1-b795-5c497c7f2f85">
+						<jr:detailCell style="table 2_TD" height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="554" height="31" forecolor="#009900" uuid="ae0904bc-a6d3-4441-aa26-0f85362a9444"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nameDri}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

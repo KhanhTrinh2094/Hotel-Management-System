@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="card" pageWidth="360" pageHeight="216" columnWidth="320" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a1e3ba4-d12c-45c7-914a-b89f56596e7c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="pass" class="java.lang.String">
+		<fieldDescription><![CDATA[pass]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="empID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[empID]]></fieldDescription>
+	</field>
+	<field name="user" class="java.lang.String">
+		<fieldDescription><![CDATA[user]]></fieldDescription>
+	</field>
+	<title>
+		<band height="50">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="320" height="50" forecolor="#FFFFFF" backcolor="#660066" uuid="5e582256-b4b8-4f7c-8350-3cbf852c9f78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEE CARD]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="113" splitType="Stretch">
+			<textField>
+				<reportElement x="168" y="88" width="128" height="24" uuid="5f18f739-4777-4aa9-9461-a378ddaeb946"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pass}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="42" width="128" height="23" uuid="32c8b308-7fb4-4d21-8538-d9e26c640aa0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="65" width="128" height="23" uuid="2fd69bea-d1da-4df6-99ba-5802989494b0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{user}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="28" y="42" width="68" height="23" uuid="475af675-bb62-4787-abc0-5663e1603918"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="88" width="68" height="24" uuid="45a4aeb6-6d62-4d39-afc1-6bfbd1376a2b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="65" width="68" height="23" uuid="d4b00d7a-c837-4cef-a651-b728ad13c8f6"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[User name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="19" width="68" height="23" uuid="0ca3a455-ee74-4b03-a7aa-f568f8152f60"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="168" y="19" width="128" height="23" uuid="35cdbc91-dad0-4fc3-a981-f88febfea399"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

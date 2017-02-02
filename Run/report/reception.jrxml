@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reception" pageWidth="297" pageHeight="421" columnWidth="257" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="35a87677-c6d1-4ec1-b6ef-e72d22a8c374">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Customer" uuid="2e8984da-694b-4ff4-9e83-f2e35c093f62">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="cusName" class="java.lang.String">
+			<fieldDescription><![CDATA[cusName]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="Customer" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="deputy" class="java.lang.String">
+		<fieldDescription><![CDATA[deputy]]></fieldDescription>
+	</field>
+	<field name="roNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[roNo]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="257" height="43" forecolor="#FFFFFF" backcolor="#FF9900" uuid="ca280825-0152-40c7-81dd-7d1fbf8c7697"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CHECK IN TICKET]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="128" height="24" uuid="18848311-679c-4d69-b5d5-db0a7812a2c1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Deputy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="24" width="128" height="24" uuid="cb97d5df-73a5-41d6-b3b9-290b74533c67"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Room]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="128" y="0" width="128" height="24" uuid="95d6c712-67f5-4342-8875-dd43faf0b11b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deputy}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="24" width="128" height="24" uuid="04bd2b78-dcb0-414f-a54a-4e6bf99fc314"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="256" height="31" forecolor="#FFFFFF" backcolor="#FF9900" uuid="ecc1a764-7ba2-46ff-ab82-c53a75a0a6c6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MEMBERS]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="table" style="table" x="0" y="31" width="257" height="50" uuid="3108ca48-6cf0-41e0-9e26-1f9579774bd5"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Customer" uuid="50f8a349-5c95-47ec-bad5-fb9c02f91f1b">
+						<dataSourceExpression><![CDATA[$P{Customer}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="256" uuid="9a7e9f10-bd2a-4bbd-baec-a802a1128dca">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="256" height="30" forecolor="#FFFFFF" backcolor="#FFCC66" uuid="143078e4-9dd1-4559-8eab-6ef6d1cea54a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NAME]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="256" height="20" uuid="68df52c0-d746-426d-977c-3eaaa0dea4ff"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cusName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
